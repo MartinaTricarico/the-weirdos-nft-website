@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "./Button";
 import Logo from "./Logo";
 
 const Section = styled.section`
@@ -26,6 +27,21 @@ const Menu = styled.ul`
 
 const MenuItem = styled.li`
   margin: 0 1rem;
+  color: ${(props) => props.theme.text};
+  cursor: pointer;
+
+  &::after {
+    content: "  ";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: ${(props) => props.theme.text};
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 `;
 
 const Navigation = () => {
@@ -41,7 +57,7 @@ const Navigation = () => {
           <MenuItem>Team</MenuItem>
           <MenuItem>Faq</MenuItem>
         </Menu>
-        <h2>Button</h2>
+        <Button text="Connect Wallet" link="https://google.com"></Button>
       </NavBar>
     </Section>
   );

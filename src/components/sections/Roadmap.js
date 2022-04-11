@@ -161,6 +161,7 @@ const Roadmap = () => {
         }
       );
     });
+    // eslint-disable-next-line no-sequences
     return () => {}, [];
   });
 

@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { useWindowScroll } from "react-use";
 import styled from "styled-components";
-import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 
 const Up = styled.div`
   width: 3rem;

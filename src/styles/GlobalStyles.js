@@ -3,6 +3,10 @@ import "@fontsource/akaya-telivigala";
 import "@fontsource/sora";
 
 const GlobalStyles = createGlobalStyle`
+
+/* *{
+    outline: 1px solid ;
+} */
     *,*::before, *::after {
         margin: 0;
         padding: 0;

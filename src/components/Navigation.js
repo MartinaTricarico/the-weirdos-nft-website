@@ -41,21 +41,23 @@ const Menu = styled.ul`
     /* 1024 px */
 
     position: fixed;
-    top: 5rem;
+    top: ${(props) => props.theme.navHeight};
     left: 0;
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: ${(props) => `calc(100vh - 5rem)`};
+    height: ${(props) => `calc(100vh - ${props.theme.navHeight})`};
     z-index: 50;
     background-color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.85)`};
     backdrop-filter: blur(2px);
 
     transform: ${(props) =>
-      props.click ? "translateY(0)" : "translateY(100%)"};
+      props.click ? "translateY(0)" : "translateY(1000%)"};
     transition: all 0.3s ease;
     flex-direction: column;
     justify-content: center;
+
+    touch-action: none;
   }
 `;
 
